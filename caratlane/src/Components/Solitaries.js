@@ -1,43 +1,45 @@
 import { Typography, Grid, Divider } from "@mui/material";
 import React from "react";
 
-const Rings = () => {
+const Solitaries = () => {
     const images = [
-        { url: 'https://banner.caratlane.com/live-images/3e52030aaf3c4b59b34f7825aaefd475.jpg', name: 'ENGAGEMENT' },
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'DAILY WEAR' },
-        { url: 'https://banner.caratlane.com/live-images/45bd4c30c40e41308ea829c2f415ae97.png', name: 'COUPLE RINGS' },
-        { url: 'https://banner.caratlane.com/live-images/94329809fcdf408eb7487e69abd78d21.jpg', name: 'COCKTAIL' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'INFINITY' },
+        { url: 'https://banner.caratlane.com/live-images/09f33b890d1844debb86f3146b75c2d9.jpg', name: 'RINGS' },
+        { url: 'https://banner.caratlane.com/live-images/6da9461dcc60446bbe74760804305c1a.jpg', name: 'PENDANTS' },
+        { url: 'https://banner.caratlane.com/live-images/3d7f53c12a774a9c9e9461feaff23c6d.jpg', name: 'NECKLACE' },
+        { url: 'https://banner.caratlane.com/live-images/8731e8a50ae84ab0b53b2c4b9e75ca84.png', name: 'MENS SOLITAIRE' },
+       
         
     ]
     const imagess = [
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'SOLITAIRE' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'PLATINUM' },
-        { url: 'https://banner.caratlane.com/live-images/45bd4c30c40e41308ea829c2f415ae97.png', name: 'BANDS' },
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'PROMISE RINGS' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'ADJUSTABLE RINGS' },
+        
+        { url: 'https://banner.caratlane.com/live-images/6142b4f851664135af4d418df80eb220.jpg', name: 'EARRINGS' },
+        { url: 'https://banner.caratlane.com/live-images/1effd55ea43844d7ba0294ba7fba92df.jpg', name: 'BRIDAL SET' },
+        { url: 'https://banner.caratlane.com/live-images/a2809a04e6274900af2a280280266831.png', name: 'MANGALSUTRA' },
+        
         
     ]
     const stones = [
-        { url: 'https://banner.caratlane.com/live-images/42312a2603064c83ab56f5991e09285d.png', name: 'GOLD' },
-        { url: 'https://banner.caratlane.com/live-images/9440e36056344d9b87f2595609645a72.png', name: 'DIAMOND' },
-        { url: 'https://banner.caratlane.com/live-images/d1a7f911832941a397924c2d91b8a4be.png', name: 'GEMSTONE' },
-        { url: 'https://cdn.caratlane.com/media/static/images/V4/2023/CL/10_OCT/HPBanner/Menu/01/Nav.png', name: 'NAVARATNA' },
-        { url: 'https://cdn.caratlane.com/media/static/images/V4/2023/CL/10_OCT/HPBanner/Menu/01/Pearl.png', name: 'PEARL' },
-        { url: 'https://banner.caratlane.com/live-images/67d8830039e64bab9a993f203cb82208.png', name: 'YELLOW GOLD' },
-        { url: 'https://banner.caratlane.com/live-images/40fbb1dbeb9b45b39d004373fd4e4485.png', name: 'ROSE GOLD' },
-        { url: 'https://banner.caratlane.com/live-images/04d2cec15dd04bcc9b33747e788f6c8e.png', name: 'WHITE GOLD' },
+        { url: 'https://banner.caratlane.com/live-images/363e20a4bede40a4b3a547ecdaf26109.png', name: 'ROUND' },
+        { url: 'https://banner.caratlane.com/live-images/569ee912e74848fca4ca9438767c6615.png', name: 'PEAR' },
+        { url: 'https://banner.caratlane.com/live-images/436a3fb63e7642b9a799ce86e484e452.png', name: 'HEART' },
+        { url: 'https://banner.caratlane.com/live-images/3579d06f08754a95bea78c0139c8586f.png', name: 'PRINCESS' },
+        { url: 'https://banner.caratlane.com/live-images/d6b3ce5f01fc461ab12be267d9ae144a.png', name: 'OVAL' },
+        { url: 'https://banner.caratlane.com/live-images/4d2666d543044f58b8d951ae09d1029c.png', name: 'CUSHION' },
+        { url: 'https://banner.caratlane.com/live-images/829e2bf737d24ca08c8d446b1457325a.png', name: 'EMERALD' },
         
     ]
     const shopByData = [
-        { title: "under ₹10k" },
-        { title: "₹10k to ₹20k" },
-        { title: "₹20k to ₹30k" },
-        { title: "₹30k to ₹40k" },
-        { title: "₹40k to ₹50k" },
-        { title: "₹50k to ₹75k" },
-        { title: "Above ₹75k" },
-        { title: "FOR MEN" },
+        { title: "under ₹50k" },
+        { title: "₹50k to ₹1LACK" },
+     { title: "Above ₹1LACK" },
+        
+      ];
+      const jewData = [
+        { title: "JEWELLERY GUIDE" },
+        { title: "DESIGN YOUR OWN" },
+     { title: "SHOW ALL DESIGNS" },
+     { title: "ALL DIAMOND JEWELLERY" },
+        
       ];
     return (
         <>
@@ -74,7 +76,7 @@ const Rings = () => {
                 <Typography variant="p" sx={{ fontWeight: "bold" }}>SHOP BY METAL & STONE</Typography>
                     <Divider sx={{ marginTop: 1, borderColor: '#8863fb', width: '50%' }} />
                     {stones.map((image, index) => (
-                            <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
+                            <div key={index} style={{ display: 'flex', alignItems: 'center',marginBottom: '10px' }}>
                                 <img src={image.url} alt={image.name}
                                     style={{ marginRight: '10px' }}
                                 />
@@ -92,12 +94,16 @@ const Rings = () => {
             <Typography variant="p">{item.title}</Typography>
           </Grid>
         ))}
-         <Divider sx={{ marginTop: 3, borderColor: '#8863fb', width: '50%' }} />
-         <Typography variant="p" sx={{ fontWeight: "bold" }}>SHOW ALL DESIGNS  </Typography>
+         <Divider sx={{ margin: 4, borderColor: '#8863fb', width: '50%' }} />
+         {jewData.map((item, index) => (
+          <Grid item key={index} style={{ marginBottom: '10px' }}>
+            <Typography variant="p"sx={{fontWeight: "bold"}} >{item.title}</Typography>
+          </Grid>
+        ))}
                 </Grid>
                 <Grid item xs={4} sx={{marginTop:-2}} >
-                    <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/12_DEC/HP%20banner/Down_1/Rings.jpg" 
-                      style={{ maxWidth: '120%', height: 'auto'  }} />
+                    <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/12_DEC/HP%20banner/Down_1/Solitaires.jpg" 
+                      style={{ maxWidth: '110%', height: 'auto'  }} />
     </Grid>
 
             </Grid>
@@ -105,4 +111,4 @@ const Rings = () => {
     );
 }
 
-export default Rings;
+export default Solitaries;

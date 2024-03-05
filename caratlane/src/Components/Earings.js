@@ -1,21 +1,21 @@
 import { Typography, Grid, Divider } from "@mui/material";
 import React from "react";
 
-const Rings = () => {
+const Earings = () => {
     const images = [
-        { url: 'https://banner.caratlane.com/live-images/3e52030aaf3c4b59b34f7825aaefd475.jpg', name: 'ENGAGEMENT' },
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'DAILY WEAR' },
-        { url: 'https://banner.caratlane.com/live-images/45bd4c30c40e41308ea829c2f415ae97.png', name: 'COUPLE RINGS' },
-        { url: 'https://banner.caratlane.com/live-images/94329809fcdf408eb7487e69abd78d21.jpg', name: 'COCKTAIL' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'INFINITY' },
+        { url: 'https://banner.caratlane.com/live-images/c4b1660f99f34e688274b930a5a70d8f.jpg', name: 'STUDS' },
+        { url: 'https://banner.caratlane.com/live-images/05cb5d46b065499ca6e50f30724f7e90.jpg', name: 'JHUMKAS' },
+        { url: 'https://banner.caratlane.com/live-images/4868fb10515f42c184cb4e1a58cd03e2.jpg', name: 'EARCUFFS' },
+        { url: 'https://banner.caratlane.com/live-images/bc990516499d4f35b9a320887d91452c.jpg', name: 'PEARL EARRINGS' },
+        { url: 'https://banner.caratlane.com/live-images/ad95f529f18c48cea0644493c3f2bacc.jpg', name: 'CHANDBALI EARRINGS' },
         
     ]
     const imagess = [
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'SOLITAIRE' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'PLATINUM' },
-        { url: 'https://banner.caratlane.com/live-images/45bd4c30c40e41308ea829c2f415ae97.png', name: 'BANDS' },
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'PROMISE RINGS' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'ADJUSTABLE RINGS' },
+        { url: 'https://banner.caratlane.com/live-images/c82f3668b7524234a033ca0f1e9198bf.jpg', name: 'DROPS' },
+        { url: 'https://banner.caratlane.com/live-images/f437f34cb83e461db8c268d7f575307e.jpg', name: 'HOOPS AND HUGGIES' },
+        { url: 'https://banner.caratlane.com/live-images/059a2243502b4b8caee4f2a032e7f0d5.jpg', name: 'SUIDHAGA' },
+        { url: 'https://banner.caratlane.com/live-images/44e34a1c90b74b799eb01913ec74d05f.png', name: 'GOLD EARRINGS' },
+        { url: 'https://banner.caratlane.com/live-images/05cb5d46b065499ca6e50f30724f7e90.jpg', name: 'DAILYWEAR EARRINGS' },
         
     ]
     const stones = [
@@ -37,7 +37,7 @@ const Rings = () => {
         { title: "₹40k to ₹50k" },
         { title: "₹50k to ₹75k" },
         { title: "Above ₹75k" },
-        { title: "FOR MEN" },
+        { title: "FOR WOMEN" },
       ];
     return (
         <>
@@ -74,7 +74,7 @@ const Rings = () => {
                 <Typography variant="p" sx={{ fontWeight: "bold" }}>SHOP BY METAL & STONE</Typography>
                     <Divider sx={{ marginTop: 1, borderColor: '#8863fb', width: '50%' }} />
                     {stones.map((image, index) => (
-                            <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
+                            <div key={index} style={{ display: 'flex', alignItems: 'center',marginBottom: '10px' }}>
                                 <img src={image.url} alt={image.name}
                                     style={{ marginRight: '10px' }}
                                 />
@@ -96,8 +96,8 @@ const Rings = () => {
          <Typography variant="p" sx={{ fontWeight: "bold" }}>SHOW ALL DESIGNS  </Typography>
                 </Grid>
                 <Grid item xs={4} sx={{marginTop:-2}} >
-                    <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/12_DEC/HP%20banner/Down_1/Rings.jpg" 
-                      style={{ maxWidth: '120%', height: 'auto'  }} />
+                    <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/12_DEC/HP%20banner/Down_1/Stud.jpg" 
+                      style={{ maxWidth: '110%', height: 'auto'  }} />
     </Grid>
 
             </Grid>
@@ -105,4 +105,4 @@ const Rings = () => {
     );
 }
 
-export default Rings;
+export default Earings;

@@ -1,28 +1,28 @@
 import { Typography, Grid, Divider } from "@mui/material";
 import React from "react";
 
-const Rings = () => {
+const Bracelets = () => {
     const images = [
-        { url: 'https://banner.caratlane.com/live-images/3e52030aaf3c4b59b34f7825aaefd475.jpg', name: 'ENGAGEMENT' },
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'DAILY WEAR' },
-        { url: 'https://banner.caratlane.com/live-images/45bd4c30c40e41308ea829c2f415ae97.png', name: 'COUPLE RINGS' },
-        { url: 'https://banner.caratlane.com/live-images/94329809fcdf408eb7487e69abd78d21.jpg', name: 'COCKTAIL' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'INFINITY' },
+        { url: 'https://banner.caratlane.com/live-images/ef83bc921a13405e8920ad83e0432795.jpg', name: 'CHAIN BRACELETS' },
+        { url: 'https://banner.caratlane.com/live-images/bb3907642a3f4ca79e1a42e2026598a3.jpg', name: 'FLEXIBLE BRACELETS' },
+        { url: 'https://banner.caratlane.com/live-images/b1037b1ad67e4199a3f45f49f60241e2.jpg', name: 'LIGHTWEAR BANGLES' },
+        { url: 'https://banner.caratlane.com/live-images/fb2bbc016b7746aabe4edca3e2ebee37.png', name: 'GOLD BANGLES' },
+        { url: 'https://cdn.caratlane.com/media/static/images/V4/2024/Shaya/02-FEB/Merch%20work/20/CL_menu_4.jpg', name: 'KIDS BRACELETS' },
         
     ]
     const imagess = [
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'SOLITAIRE' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'PLATINUM' },
-        { url: 'https://banner.caratlane.com/live-images/45bd4c30c40e41308ea829c2f415ae97.png', name: 'BANDS' },
-        { url: 'https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg', name: 'PROMISE RINGS' },
-        { url: 'https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg', name: 'ADJUSTABLE RINGS' },
+        
+        { url: 'https://banner.caratlane.com/live-images/05e292e9cf424ec58e05a67bb805355b.jpg', name: 'OVAL BRACELETS' },
+        { url: 'https://banner.caratlane.com/live-images/f9ad94f888c14b8fb194829426a12a49.png', name: 'MANGALSUTRA BRACELETS' },
+        { url: 'https://banner.caratlane.com/live-images/7d7c48a01cc041828a4aaaf724c93342.jpg', name: 'DIAMOND BANGLES' },
+        { url: 'https://banner.caratlane.com/live-images/1acd93734c6c4fe7b45415563c439d5d.jpg', name: '22KT BRACELETS' },
+        { url: 'https://banner.caratlane.com/live-images/d794dd63a1ec46e8b28cfa85ab70550f.jpg', name: 'SILVER BRACELETS' },
         
     ]
     const stones = [
         { url: 'https://banner.caratlane.com/live-images/42312a2603064c83ab56f5991e09285d.png', name: 'GOLD' },
         { url: 'https://banner.caratlane.com/live-images/9440e36056344d9b87f2595609645a72.png', name: 'DIAMOND' },
         { url: 'https://banner.caratlane.com/live-images/d1a7f911832941a397924c2d91b8a4be.png', name: 'GEMSTONE' },
-        { url: 'https://cdn.caratlane.com/media/static/images/V4/2023/CL/10_OCT/HPBanner/Menu/01/Nav.png', name: 'NAVARATNA' },
         { url: 'https://cdn.caratlane.com/media/static/images/V4/2023/CL/10_OCT/HPBanner/Menu/01/Pearl.png', name: 'PEARL' },
         { url: 'https://banner.caratlane.com/live-images/67d8830039e64bab9a993f203cb82208.png', name: 'YELLOW GOLD' },
         { url: 'https://banner.caratlane.com/live-images/40fbb1dbeb9b45b39d004373fd4e4485.png', name: 'ROSE GOLD' },
@@ -37,6 +37,7 @@ const Rings = () => {
         { title: "₹40k to ₹50k" },
         { title: "₹50k to ₹75k" },
         { title: "Above ₹75k" },
+        { title: "FOR WOMEN" },
         { title: "FOR MEN" },
       ];
     return (
@@ -74,7 +75,7 @@ const Rings = () => {
                 <Typography variant="p" sx={{ fontWeight: "bold" }}>SHOP BY METAL & STONE</Typography>
                     <Divider sx={{ marginTop: 1, borderColor: '#8863fb', width: '50%' }} />
                     {stones.map((image, index) => (
-                            <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
+                            <div key={index} style={{ display: 'flex', alignItems: 'center',marginBottom: '10px' }}>
                                 <img src={image.url} alt={image.name}
                                     style={{ marginRight: '10px' }}
                                 />
@@ -93,11 +94,11 @@ const Rings = () => {
           </Grid>
         ))}
          <Divider sx={{ marginTop: 3, borderColor: '#8863fb', width: '50%' }} />
-         <Typography variant="p" sx={{ fontWeight: "bold" }}>SHOW ALL DESIGNS  </Typography>
+         <Typography variant="p" sx={{ fontWeight: "bold" }}> ALL BRACELETS  </Typography>
                 </Grid>
                 <Grid item xs={4} sx={{marginTop:-2}} >
-                    <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/12_DEC/HP%20banner/Down_1/Rings.jpg" 
-                      style={{ maxWidth: '120%', height: 'auto'  }} />
+                    <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/12_DEC/HP%20banner/Down_1/Bracelets.jpg" 
+                      style={{ maxWidth: '110%', height: 'auto'  }} />
     </Grid>
 
             </Grid>
@@ -105,4 +106,4 @@ const Rings = () => {
     );
 }
 
-export default Rings;
+export default Bracelets;
