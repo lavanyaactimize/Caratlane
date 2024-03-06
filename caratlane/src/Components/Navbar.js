@@ -12,6 +12,9 @@ import Bracelets from "./Bracelets";
 import Solitaries from "./Solitaries";
 import Morejewellery from "./Morejewellery";
 import Gifts from "./Gifts";
+import CustomCarousel from "./Carousel";
+
+
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,7 +59,7 @@ const Navbar = () => {
   }
   const jewelleryData = [
     { label: "Rings", index: 0, number: "10px" },
-    { label: "Earrings", index: 1, number: "-25px" },
+    { label: "Earrings", index: 1, number: "10px" },
     { label: "Bracelets & Bangles", index: 2, number: "10px" },
     { label: "Solitaries", index: 3, number: "10px" },
     { label: "Mangalsutras", index: 4, number: "10px" },
@@ -68,13 +71,14 @@ const Navbar = () => {
   ];
   return (
     <>
-      <Grid container alignItems="center" sx={{ marginTop: '40px' }}>
+    {/* <CustomCarousel/> */}
+      <Grid container alignItems="center" sx={{ marginTop: '40px',padding:0 }}>
         <Grid item sx={{ position: 'absolute', top: "55px", left: "27px" }} >
-          <img src="asserts\images\cartlane (2).png" width={30} height={34} alt="Cart Icon" />
+          <img src="asserts\images\cartlane (2).png" width={30} height={38} alt="Cart Icon" />
         </Grid>
-        <Grid item sx={{ marginLeft: '50px' }}>
+        <Grid item sx={{lg:'120%', marginLeft: '50px' }}>
           <Box >
-            <Box sx={{ marginTop: { md: '10px' }, display: { xs: 'none', md: 'block' }, margin: 'auto', border: '1px solid black' }} onMouseLeave={() => handleTabLeave(-1)}>
+            <Box sx={{ marginTop: { md: '10px' }, display: { xs: 'none', md: 'block' }, margin: 'auto' }} onMouseLeave={() => handleTabLeave(-1)}>
               <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%', }}>
                 <Tabs value={value} onChange={handleChange} indicatorColor="#8863fb" aria-label="basic tabs example">
                   {jewelleryData.map((item) => (
@@ -89,8 +93,9 @@ const Navbar = () => {
                     }} label={item.label} {...a11yProps(item.index)} onMouseEnter={() => handleChange(item.index)} />
 
                   ))}
+                  
 
-                  <Grid item sx={{ top: "50px", right: 260, zIndex: 1000,width:'90%' }}>
+                  <Grid item sx={{ right: 260, zIndex: 1000,width:'90%' }}>
 
                     <Input
                       placeholder="Search by"
@@ -98,7 +103,7 @@ const Navbar = () => {
                         border: '1px solid rgb(229, 110, 235)',
                         borderRadius: '12px',
                         background: '#F4F4F4',
-                        padding: "5px 15px 5px 26px",
+                        padding: "9px 20px 9px 28px",
                         '&:hover': { border: '1px rgb(229, 110, 235)', },
                         '&:focus': { outline: 'none', boxShadow: '0 2px 2px 0 #e9e9e9' },
                         '&.MuiInput-underline:before, &.MuiInput-underline:hover:not(.Mui-disabled):before': {
@@ -107,23 +112,23 @@ const Navbar = () => {
                       }}
                     />
                   </Grid>
-                  <Grid container sx={{alignItems:'center' }}>
+                  <Grid container sx={{alignItems:'center'  }}>
 
                   
-                  <Grid item sx={{ top: "50px", right: 160, zIndex: 1000, }}>
+                  <Grid item sx={{ top: "50px", right: 160, zIndex: 1000,marginLeft:2}}>
                     <Typography variant="p" sx={{ color: '#4f3267' }}>Delivery & store
                       <Typography sx={{ fontSize: "12px", color: "#DE57E5" }}>Enter Pincode</Typography></Typography>
                   </Grid>
-                  <Grid item sx={{border:'1px solid red' , paddingTop:'8px' }}>
+                  <Grid item sx={{ paddingTop:'8px',marginLeft:2 }}>
                     <img src="asserts\images\india.png" width={35} height={35} />
                   </Grid>
-                  <Grid item sx={{ top: "59px", right: 80, zIndex: 1000 }}>
+                  <Grid item sx={{ top: "59px", right: 80, zIndex: 1000,marginLeft:2 }}>
                     <Icon icon="mdi:user" width="25" height="25" style={{ color: '#4f3267' }} />
                   </Grid>
-                  <Grid item sx={{ top: "59px", right: 50, zIndex: 1000 }}>
+                  <Grid item sx={{ top: "59px", right: 50, zIndex: 1000,marginLeft:1.8 }}>
                     <Icon icon="mdi:heart" width="25" height="25" style={{ color: '#4f3267' }} />
                   </Grid>
-                  <Grid item sx={{ top: "59px", right: 20, zIndex: 1000 , }}>
+                  <Grid item sx={{ top: "59px", right: 20, zIndex: 1000 ,}}>
                     <Icon icon="bxs:cart" width="25" height="25" style={{ color: ' #4f3267', }} />
                   </Grid>
                   </Grid>
@@ -133,16 +138,16 @@ const Navbar = () => {
                 </Tabs>
               </Box>
               <CustomTabPanel value={value} index={0}>
-                {/* <Rings /> */}
+                <Rings />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={1}>
-                {/* <Earings /> */}
+                <Earings />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={2}>
-                {/* <Bracelets /> */}
+                <Bracelets />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={3}>
-                {/* <Solitaries /> */}
+                <Solitaries />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={4}>
 
@@ -195,6 +200,7 @@ const Navbar = () => {
         </Grid> */}
 
       </Grid >
+      
     </>
   )
 }

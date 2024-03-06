@@ -43,7 +43,7 @@ const Solitaries = () => {
       ];
     return (
         <>
-            <Grid container spacing={2} sx={{ width:'100%'}}> 
+            <Grid container spacing={2} sx={{ width:'100%',backgroundColor:'#ffff',marginTop:-3}}> 
              <Grid item xs={4} sx={{ display:'flex'}}>
                 <Grid item xs={6} >
                 <Typography variant="p" sx={{ fontWeight: "bold" }}>SHOP BY STYLE</Typography>

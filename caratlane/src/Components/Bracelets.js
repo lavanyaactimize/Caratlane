@@ -42,7 +42,7 @@ const Bracelets = () => {
       ];
     return (
         <>
-            <Grid container spacing={2} sx={{ width:'100%'}}> 
+            <Grid container spacing={2} sx={{ width:'100%',backgroundColor:'#ffff',marginTop:-3}}> 
              <Grid item xs={4} sx={{ display:'flex'}}>
                 <Grid item xs={6} >
                 <Typography variant="p" sx={{ fontWeight: "bold" }}>SHOP BY STYLE</Typography>
@@ -98,7 +98,7 @@ const Bracelets = () => {
                 </Grid>
                 <Grid item xs={4} sx={{marginTop:-2}} >
                     <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/12_DEC/HP%20banner/Down_1/Bracelets.jpg" 
-                      style={{ maxWidth: '110%', height: 'auto'  }} />
+                      style={{ maxWidth: '100%', height: 'auto'  }} />
     </Grid>
 
             </Grid>

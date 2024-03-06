@@ -52,7 +52,7 @@ const Morejewellery = () => {
       
     return (
         <>
-        <Grid container spacing={2} sx={{}}> 
+        <Grid container spacing={2} sx={{backgroundColor:'#ffff',marginTop:-3}}> 
              <Grid item xs={3} sx={{ display:'flex'}}>
                 <Grid item xs={6} >
                 <Typography variant="p" sx={{ fontWeight: "bold" }}>PENDANTS</Typography>
@@ -75,12 +75,12 @@ const Morejewellery = () => {
                             </div>
                         ))}  
                         </Grid>
-                        <Grid item xs={6} sx={{marginTop:3.8}}> 
+                        <Grid item xs={3} sx={{marginTop:3.8}}> 
                        
                         </Grid>
                 </Grid>
                 
-                <Grid item xs={3} >
+                <Grid item xs={2} >
                 <Divider sx={{ marginTop: 1, borderColor: '#8863fb', width: '50%' }} />
                         {imagess.map((item, index) => (
                             <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
@@ -114,9 +114,9 @@ const Morejewellery = () => {
                         ))}
                      </Grid>
                 
-                <Grid item xs={3} sx={{marginTop:-2}} >
+                <Grid item xs={3} sx={{marginTop:-3}} >
                     <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/12_DEC/HP%20banner/Down_1/Mangalsutras.jpg"
-                      style={{ maxWidth: '290%', height: 'auto'  }} />
+                      style={{ maxWidth: '123%', height: '80%'  }} />
     </Grid>
 
             </Grid>

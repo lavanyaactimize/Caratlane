@@ -1,12 +1,11 @@
 import './App.css';
-import Appbar from './Components/Appbar';
-import Navbar from './Components/Navbar';
+import Flashpage from './Pages/Flashpage';
+
 
 function App() {
   return (
     <>
-    <Appbar/>
-    <Navbar/>
+    <Flashpage/>
     </>
   );
 }
