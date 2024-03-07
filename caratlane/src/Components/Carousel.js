@@ -13,7 +13,7 @@ const CustomCarousel = () => {
     };
 
     return (
-        <Box position="fixed" 
+        <Box position="relative" 
         top={100} width="100%" zIndex={-1}
         >
             <style>

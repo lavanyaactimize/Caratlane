@@ -14,8 +14,6 @@ import Morejewellery from "./Morejewellery";
 import Gifts from "./Gifts";
 import CustomCarousel from "./Carousel";
 
-
-
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -48,15 +46,18 @@ function a11yProps(index) {
     'aria-controls': `simple-tabpanel-${index}`,
   };
 }
+
 const Navbar = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (newValue) => {
     setValue(newValue);
   };
+
   const handleTabLeave = () => {
     setValue(null);
   }
+
   const jewelleryData = [
     { label: "Rings", index: 0, number: "10px" },
     { label: "Earrings", index: 1, number: "10px" },
@@ -66,146 +67,143 @@ const Navbar = () => {
     { label: "Necklaces", index: 5, number: "10px" },
     { label: "More Jewellery", index: 6, number: "10px" },
     { label: "Gifting", index: 7, number: "10px" },
-
-
   ];
+
   return (
     <>
-    {/* <CustomCarousel/> */}
-      <Grid container alignItems="center" sx={{ marginTop: '40px',padding:0 }}>
-        <Grid item sx={{ position: 'absolute', top: "55px", left: "27px" }} >
-          <img src="asserts\images\cartlane (2).png" width={30} height={38} alt="Cart Icon" />
-        </Grid>
-        <Grid item sx={{lg:'120%', marginLeft: '50px' }}>
-          <Box >
-            <Box sx={{ marginTop: { md: '10px' }, display: { xs: 'none', md: 'block' }, margin: 'auto' }} onMouseLeave={() => handleTabLeave(-1)}>
-              <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%', }}>
-                <Tabs value={value} onChange={handleChange} indicatorColor="#8863fb" aria-label="basic tabs example">
-                  {jewelleryData.map((item) => (
-                    <Tab sx={{
-                      fontSize: '0.9rem', fontWeight: '500', textTransform: 'none', color: '#4f3267', marginLeft: item.number, '&:hover': {
-                        color: '#8863fb',
-                        borderBottom: '3px solid #8863fb',
+     
 
-                        cursor: 'pointer',
+<Grid container alignItems="center" sx={{ marginTop: '36px',padding:0,position:"fixed", backgroundColor:"#ffff"}}>
+<Grid item sx={{ position: 'absolute', top: "17px", left: "27px" }} >
+  <img src="asserts\images\cartlane (2).png" width={30} height={38} alt="Cart Icon" />
+</Grid>
+<Grid item sx={{lg:'120%', marginLeft: '50px' }}>
+  <Box >
+    <Box sx={{ marginTop: { md: '10px' }, display: { xs: 'none', md: 'block' }, margin: 'auto' }} onMouseLeave={() => handleTabLeave(-1)}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%', }}>
+        <Tabs value={value} onChange={handleChange} indicatorColor="#8863fb" aria-label="basic tabs example">
+          {jewelleryData.map((item) => (
+            <Tab sx={{
+              fontSize: '0.9rem', fontWeight: '500', textTransform: 'none', color: '#4f3267', marginLeft: item.number, '&:hover': {
+                color: '#8863fb',
+                borderBottom: '3px solid #8863fb',
 
-                      },
-                    }} label={item.label} {...a11yProps(item.index)} onMouseEnter={() => handleChange(item.index)} />
+                cursor: 'pointer',
 
-                  ))}
-                  
-
-                  <Grid item sx={{ right: 260, zIndex: 1000,width:'90%' }}>
-
-                    <Input
-                      placeholder="Search by"
-                      sx={{
-                        border: '1px solid rgb(229, 110, 235)',
-                        borderRadius: '12px',
-                        background: '#F4F4F4',
-                        padding: "9px 20px 9px 28px",
-                        '&:hover': { border: '1px rgb(229, 110, 235)', },
-                        '&:focus': { outline: 'none', boxShadow: '0 2px 2px 0 #e9e9e9' },
-                        '&.MuiInput-underline:before, &.MuiInput-underline:hover:not(.Mui-disabled):before': {
-                          borderBottom: 'none',
-                        },
-                      }}
-                    />
-                  </Grid>
-                  <Grid container sx={{alignItems:'center'  }}>
-
-                  
-                  <Grid item sx={{ top: "50px", right: 160, zIndex: 1000,marginLeft:2}}>
-                    <Typography variant="p" sx={{ color: '#4f3267' }}>Delivery & store
-                      <Typography sx={{ fontSize: "12px", color: "#DE57E5" }}>Enter Pincode</Typography></Typography>
-                  </Grid>
-                  <Grid item sx={{ paddingTop:'8px',marginLeft:2 }}>
-                    <img src="asserts\images\india.png" width={35} height={35} />
-                  </Grid>
-                  <Grid item sx={{ top: "59px", right: 80, zIndex: 1000,marginLeft:2 }}>
-                    <Icon icon="mdi:user" width="25" height="25" style={{ color: '#4f3267' }} />
-                  </Grid>
-                  <Grid item sx={{ top: "59px", right: 50, zIndex: 1000,marginLeft:1.8 }}>
-                    <Icon icon="mdi:heart" width="25" height="25" style={{ color: '#4f3267' }} />
-                  </Grid>
-                  <Grid item sx={{ top: "59px", right: 20, zIndex: 1000 ,}}>
-                    <Icon icon="bxs:cart" width="25" height="25" style={{ color: ' #4f3267', }} />
-                  </Grid>
-                  </Grid>
-
-
-
-                </Tabs>
-              </Box>
-              <CustomTabPanel value={value} index={0}>
-                <Rings />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={1}>
-                <Earings />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={2}>
-                <Bracelets />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={3}>
-                <Solitaries />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={4}>
-
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={5}>
-
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={6}>
-                <Morejewellery />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={7}>
-                <Gifts />
-              </CustomTabPanel>
-
-            </Box>
-          </Box>
-        </Grid>
-        <Grid item sx={{ position: 'fixed', top: "50px", right: 260, zIndex: 1000 , display:{xs:'block', md:'none'}}}>
-
-          <Input
-            placeholder="Search by"
-            sx={{
-              border: '1px solid rgb(229, 110, 235)',
-              borderRadius: '12px',
-              background: '#F4F4F4',
-              padding: "5px 15px 5px 26px",
-              '&:hover': { border: '1px rgb(229, 110, 235)', },
-              '&:focus': { outline: 'none', boxShadow: '0 2px 2px 0 #e9e9e9' },
-              '&.MuiInput-underline:before, &.MuiInput-underline:hover:not(.Mui-disabled):before': {
-                borderBottom: 'none',
               },
-            }}
-          />
-        </Grid>
-        {/* <Grid item sx={{ position: 'fixed', top: "50px", right: 160, zIndex: 1000 }}>
-          <Typography variant="p" sx={{ color: '#4f3267' }}>Delivery & store
-            <Typography sx={{ fontSize: "12px", color: "#DE57E5" }}>Enter Pincode</Typography></Typography>
-        </Grid>
-        <Grid item sx={{ position: 'fixed', top: "57px", right: 120, zIndex: 1000 }}>
-          <img src="asserts\images\india.png" width={37} height={45} />
-        </Grid>
-        <Grid item sx={{ position: 'fixed', top: "59px", right: 80, zIndex: 1000 }}>
-          <Icon icon="mdi:user" width="25" height="25" style={{ color: '#4f3267' }} />
-        </Grid>
-        <Grid item sx={{ position: 'fixed', top: "59px", right: 50, zIndex: 1000 }}>
-          <Icon icon="mdi:heart" width="25" height="25" style={{ color: '#4f3267' }} />
-        </Grid>
-        <Grid item sx={{ position: 'fixed', top: "59px", right: 20, zIndex: 1000 }}>
-          <Icon icon="bxs:cart" width="25" height="25" style={{ color: ' #4f3267' }} />
-        </Grid> */}
+            }} label={item.label} {...a11yProps(item.index)} onMouseEnter={() => handleChange(item.index)} />
 
-      </Grid >
-      
+          ))}
+          
+
+          <Grid item sx={{marginTop:'5px', right: 260, zIndex: 1000,width:'90%' }}>
+
+            <Input
+              placeholder="Search by"
+              sx={{
+                border: '1px solid rgb(229, 110, 235)',
+                borderRadius: '12px',
+                background: '#F4F4F4',
+                padding: "9px 20px 9px 28px",
+                '&:hover': { border: '1px rgb(229, 110, 235)', },
+                '&:focus': { outline: 'none', boxShadow: '0 2px 2px 0 #e9e9e9' },
+                '&.MuiInput-underline:before, &.MuiInput-underline:hover:not(.Mui-disabled):before': {
+                  borderBottom: 'none',
+                },
+              }}
+            />
+          </Grid>
+          <Grid container sx={{alignItems:'center'  }}>
+
+          
+          <Grid item sx={{ top: "50px", right: 160, zIndex: 1000,marginLeft:2}}>
+            <Typography variant="p" sx={{ color: '#4f3267' }}>Delivery & store
+              <Typography sx={{ fontSize: "12px", color: "#DE57E5" }}>Enter Pincode</Typography></Typography>
+          </Grid>
+          <Grid item sx={{ paddingTop:'8px',marginLeft:2 }}>
+            <img src="asserts\images\india.png" width={35} height={35} />
+          </Grid>
+          <Grid item sx={{ top: "59px", right: 80, zIndex: 1000,marginLeft:2 }}>
+            <Icon icon="mdi:user" width="25" height="25" style={{ color: '#4f3267' }} />
+          </Grid>
+          <Grid item sx={{ top: "59px", right: 50, zIndex: 1000,marginLeft:1.8 }}>
+            <Icon icon="mdi:heart" width="25" height="25" style={{ color: '#4f3267' }} />
+          </Grid>
+          <Grid item sx={{ top: "59px", right: 20, zIndex: 1000 ,}}>
+            <Icon icon="bxs:cart" width="25" height="25" style={{ color: ' #4f3267', }} />
+          </Grid>
+          </Grid>
+
+
+
+        </Tabs>
+      </Box>
+      <CustomTabPanel value={value} index={0}>
+        <Rings />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={1}>
+        <Earings />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={2}>
+        <Bracelets />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={3}>
+        <Solitaries />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={4}>
+
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={5}>
+
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={6}>
+        <Morejewellery />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={7}>
+        <Gifts />
+      </CustomTabPanel>
+
+    </Box>
+  </Box>
+</Grid>
+<Grid item sx={{ position: 'fixed', top: "50px", right: 260, zIndex: 1000 , display:{xs:'block', md:'none'}}}>
+
+  <Input
+    placeholder="Search by"
+    sx={{
+      border: '1px solid rgb(229, 110, 235)',
+      borderRadius: '12px',
+      background: '#F4F4F4',
+      padding: "5px 15px 5px 26px",
+      '&:hover': { border: '1px rgb(229, 110, 235)', },
+      '&:focus': { outline: 'none', boxShadow: '0 2px 2px 0 #e9e9e9' },
+      '&.MuiInput-underline:before, &.MuiInput-underline:hover:not(.Mui-disabled):before': {
+        borderBottom: 'none',
+      },
+    }}
+  />
+</Grid>
+{/* <Grid item sx={{ position: 'fixed', top: "50px", right: 160, zIndex: 1000 }}>
+  <Typography variant="p" sx={{ color: '#4f3267' }}>Delivery & store
+    <Typography sx={{ fontSize: "12px", color: "#DE57E5" }}>Enter Pincode</Typography></Typography>
+</Grid>
+<Grid item sx={{ position: 'fixed', top: "57px", right: 120, zIndex: 1000 }}>
+  <img src="asserts\images\india.png" width={37} height={45} />
+</Grid>
+<Grid item sx={{ position: 'fixed', top: "59px", right: 80, zIndex: 1000 }}>
+  <Icon icon="mdi:user" width="25" height="25" style={{ color: '#4f3267' }} />
+</Grid>
+<Grid item sx={{ position: 'fixed', top: "59px", right: 50, zIndex: 1000 }}>
+  <Icon icon="mdi:heart" width="25" height="25" style={{ color: '#4f3267' }} />
+</Grid>
+<Grid item sx={{ position: 'fixed', top: "59px", right: 20, zIndex: 1000 }}>
+  <Icon icon="bxs:cart" width="25" height="25" style={{ color: ' #4f3267' }} />
+</Grid> */}
+
+</Grid >
+
     </>
   )
 }
+
 export default Navbar;
-
-
-
-
