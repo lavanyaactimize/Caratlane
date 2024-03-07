@@ -13,3 +13,6 @@ code {
     monospace;
 }
 
+.image-hover:hover {
+  transform: scale(1.03);
+}
