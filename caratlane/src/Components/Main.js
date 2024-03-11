@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <Grid container sx={{ paddingLeft: 7, paddingRight: 7, marginTop: "48px" }}>
      
-      <Grid item xs={6} sx={{height: videoHeight }}>
+      <Grid item xs={6} sx={{height: videoHeight,display:{xs:"none",md:"block",lg:"block"} }}>
         <img src="asserts\images\videoframe_9862.png" alt="Your Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px' }} />
       </Grid>
      

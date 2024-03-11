@@ -5,6 +5,7 @@ import Image from "../Components/Images";
 import CustomCarousel from "../Components/Carousel";
 import Main from "../Components/Main";
 import Cards from "../Components/Cards";
+import Swiper from "../Components/Swiper";
 
 
 
@@ -18,6 +19,7 @@ const Flashpage=()=>
 <Image/>
 <Main/>
 <Cards/>
+<Swiper/>
 
         </>
     )
