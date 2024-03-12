@@ -13,6 +13,7 @@ import Solitaries from "./Solitaries";
 import Morejewellery from "./Morejewellery";
 import Gifts from "./Gifts";
 import CustomCarousel from "./Carousel";
+import Appbar from "./Appbar";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -183,22 +184,7 @@ const Navbar = () => {
     }}
   />
 </Grid>
-{/* <Grid item sx={{ position: 'fixed', top: "50px", right: 160, zIndex: 1000 }}>
-  <Typography variant="p" sx={{ color: '#4f3267' }}>Delivery & store
-    <Typography sx={{ fontSize: "12px", color: "#DE57E5" }}>Enter Pincode</Typography></Typography>
-</Grid>
-<Grid item sx={{ position: 'fixed', top: "57px", right: 120, zIndex: 1000 }}>
-  <img src="asserts\images\india.png" width={37} height={45} />
-</Grid>
-<Grid item sx={{ position: 'fixed', top: "59px", right: 80, zIndex: 1000 }}>
-  <Icon icon="mdi:user" width="25" height="25" style={{ color: '#4f3267' }} />
-</Grid>
-<Grid item sx={{ position: 'fixed', top: "59px", right: 50, zIndex: 1000 }}>
-  <Icon icon="mdi:heart" width="25" height="25" style={{ color: '#4f3267' }} />
-</Grid>
-<Grid item sx={{ position: 'fixed', top: "59px", right: 20, zIndex: 1000 }}>
-  <Icon icon="bxs:cart" width="25" height="25" style={{ color: ' #4f3267' }} />
-</Grid> */}
+
 
 </Grid >
 
