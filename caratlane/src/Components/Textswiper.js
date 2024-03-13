@@ -6,6 +6,11 @@ import { Pagination } from 'swiper/modules';
 import { Icon } from '@iconify/react';
 import { Grid, Typography ,Button} from "@mui/material";
 import SwiperCore from 'swiper/core';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 const Textswiper =()=>{
     SwiperCore.use([Pagination]);
     return(
@@ -40,7 +45,7 @@ const Textswiper =()=>{
 
 
     },
-}} // Ensure Swiper takes full width
+}} 
 >
   <SwiperSlide>
     <Grid container direction="column" alignItems="center">
@@ -91,7 +96,7 @@ const Textswiper =()=>{
     </Grid>
   </SwiperSlide>
 </Swiper>;
-<Grid container sx={{marginTop:"39px",marginBottom:"40px",padding:"20px"}} >
+<Grid container sx={{marginTop:"39px",padding:"20px"}} >
     <Grid item md={6} >
 <Typography sx={{marginLeft:4,fontSize:"1.7rem"}}>Shop Our Instagram</Typography>
 </Grid> 
@@ -127,6 +132,52 @@ const Textswiper =()=>{
   </Grid>
 </Grid>
 
+</Grid>
+<Grid container sx={{ backgroundColor: "#231535", height: "45vh", justifyContent: "center", alignItems: "center"}}>
+<Grid container  justifyContent="center" alignItems="center"  direction="column">
+  <Grid item>
+  <Icon icon="fa:paper-plane-o" 
+     width="80" height="80" 
+    style={{ color: '#a484fc' }} />
+  </Grid>
+  <Grid item>
+  <Typography variant="body1" sx={{  color:"#ffff" ,marginTop: 3,fontSize:"2rem"}}>
+  Sign up to be a Caratlane insider<br />
+  <Typography variant="body1" sx={{ marginLeft: 2,color:"#C4ADE1",border:"2px solid #6b317c",textAlign:"end",marginTop: 3 }}>
+  <Button variant="contained" sx={{backgroundColor:"#6b317c",width:"100px"}} >Submit</Button>
+ </Typography>
+
+  </Typography>
+  </Grid>
+  <Grid item sx={{marginTop:3}}>
+  <FormControl>
+  <RadioGroup
+    row
+    aria-labelledby="demo-row-radio-buttons-group-label"
+    name="row-radio-buttons-group"
+  >
+    <FormControlLabel 
+      value="female" 
+      control={<Radio style={{ color: '#a484fc' }} />} // Change color here
+      label="Female" 
+      style={{ color: '#ffff' }} // Change color here
+    />
+    <FormControlLabel 
+      value="male" 
+      control={<Radio style={{ color: '#a484fc' }} />} // Change color here
+      label="Male" 
+      style={{ color: '#ffff' }} // Change color here
+    />
+    <FormControlLabel 
+      value="other" 
+      control={<Radio style={{ color: '#a484fc' }} />} // Change color here
+      label="Other" 
+      style={{ color: '#ffff' }} // Change color here
+    />
+  </RadioGroup>
+</FormControl>
+  </Grid>
+</Grid>
 </Grid>
 
 
