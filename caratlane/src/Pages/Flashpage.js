@@ -9,7 +9,8 @@ import Swiperr from "../Components/Swiper";
 import Navbarr from "../Components/Navbarr";
 import Appbarr from "../Components/Appbarr";
 import Textswiper from "../Components/Textswiper";
-
+import Footer from "../Components/Footer";
+import Header from "../Components/Header";
 
 
 const Flashpage=()=>
@@ -17,15 +18,17 @@ const Flashpage=()=>
     return(
         <>
         <Appbar/>
-        <Appbarr/>
+        {/* <Appbarr/> */}
 {/* <Navbar/> */}
 {/* <Navbarr/> */}
+<Header/>
 <CustomCarousel/>
 <Image/>
 <Main/>
 <Cards/>
-<Swiperr/>
-<Textswiper/>
+{/* <Swiperr/> */}
+{/* <Textswiper/> */}
+{/* <Footer/> */}
 
         </>
     )

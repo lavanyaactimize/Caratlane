@@ -9,13 +9,15 @@ const Main = () => {
     setVideoHeight(event.target.clientHeight);
   };
   return (
-    <Grid container sx={{ paddingLeft: 7, paddingRight: 7, marginTop: "48px" ,display:{xs:"none",sm:"none"}}}>
+    <Grid container sx={{ paddingLeft: 7, paddingRight: 7, marginTop: "48px",   }} 
+    
+    >
      
-      <Grid item xs={6} sx={{height: videoHeight,display:{xs:"none",md:"block",lg:"block"} }}>
+      <Grid item xs={6} sx={{height: videoHeight, }} display={{ xs: "none", sm: "none",md:"block"}}>
         <img src="asserts\images\videoframe_9862.png" alt="Your Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px' }} />
       </Grid>
      
-      <Grid item xs={6} sx={{height: '98%',}}>
+      <Grid item xs={6} sx={{height: '100%',}} display={{ xs: "none", sm: "none",md:"block" }}>
         <video id="video" src={video} autoPlay loop muted controls onLoadedMetadata={handleVideoLoadedMetadata} style={{ width: '100%',  borderTopRightRadius: '20px', borderBottomRightRadius: '20px' }} />
       </Grid>
     </Grid>

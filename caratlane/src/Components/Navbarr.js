@@ -191,13 +191,7 @@ const Navbarr = () => {
             <AppBar sx={{ backgroundColor: 'white', marginTop: '30px', }}>
 
                 <Grid container sx={{ justifyContent: 'center', }} >
-                <Grid sx={{ cursor: 'pointer',}}
-                        //  onClick= {() => navigate('/')} 
-                         >
-
-                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-nykaa-3384872-2822953.png?f=webp" alt="logo" width={60} height={60} />
-
-                        </Grid>
+            
                     <Grid container sx={{ width: { lg: '70%', xl: '65%' }, alignItems: 'center', display: 'flex' }} >
 
                         <Grid sx={{ marginRight: { xs: '5px', sm: '10px' }, marginLeft: { xs: '5px', sm: '10px' }, display: { xs: 'block', md: 'none', color: 'black' } }}>
