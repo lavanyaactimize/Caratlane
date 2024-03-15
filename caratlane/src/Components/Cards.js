@@ -130,7 +130,7 @@ const Cards = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={2} sx={{ marginTop: "28px", paddingX: "38px", position:"relative"}}>
+      {/* <Grid container spacing={2} sx={{ marginTop: "28px", paddingX: "38px", position:"relative"}}>
 
        
         <Typography sx={{ position: "absolute", top: "120px", marginLeft: "350px", fontSize: '1.8rem', fontWeight: 300 }}>Unsure Which Design To </Typography>
@@ -154,7 +154,7 @@ const Cards = () => {
         </Grid>
 
 
-      </Grid>
+      </Grid> */}
 
 
 

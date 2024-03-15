@@ -11,6 +11,7 @@ import Appbarr from "../Components/Appbarr";
 import Textswiper from "../Components/Textswiper";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
+import DropdownMenu from "../Components/Dropup";
 
 
 const Flashpage=()=>
@@ -26,9 +27,10 @@ const Flashpage=()=>
 <Image/>
 <Main/>
 <Cards/>
-{/* <Swiperr/> */}
-{/* <Textswiper/> */}
-{/* <Footer/> */}
+<Swiperr/>
+<Textswiper/>
+<Footer/>
+{/* <DropdownMenu/> */}
 
         </>
     )
