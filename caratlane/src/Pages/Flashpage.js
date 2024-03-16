@@ -20,16 +20,16 @@ const Flashpage=()=>
         <>
         <Appbar/>
         {/* <Appbarr/> */}
-{/* <Navbar/> */}
+<Navbar/>
 {/* <Navbarr/> */}
-<Header/>
-<CustomCarousel/>
+{/* <Header/> */}
+{/* <CustomCarousel/>
 <Image/>
 <Main/>
 <Cards/>
 <Swiperr/>
 <Textswiper/>
-<Footer/>
+<Footer/> */}
 {/* <DropdownMenu/> */}
 
         </>
