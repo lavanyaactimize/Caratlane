@@ -120,7 +120,8 @@ const Navbar = () => {
 
 <Grid container alignItems="center" sx={{ marginTop: '36px',padding:0,position:"fixed", backgroundColor:"#ffff"}}>
   
-<Grid sx={{ marginRight: { xs: '5px', sm: '10px' }, marginLeft: { xs: '5px', sm: '10px' }, display: { xs: 'block', md: 'none', color: 'black' } }}>
+<Grid sx={{ marginRight: { xs: '5px', sm: '10px' }, marginLeft: { xs: '5px', sm: '10px' }, 
+display: { xs: 'block', md: 'none', color: 'black' } }}>
 
 <Icon 
 // onClick={handleOpen}
@@ -333,7 +334,7 @@ const Navbar = () => {
 <Box
   sx={{
     flexGrow: 1,
-    display: { xs: 'block', sm: 'block', md: "none" },
+    display: { xs: 'flex', sm: 'flex', md: "none" },
     justifyContent: 'center', // Center horizontally
     alignItems: 'center', // Center vertically
   }}
@@ -341,8 +342,9 @@ const Navbar = () => {
   <Input
     placeholder="Search by"
     sx={{
+      width: '150%',
       border: '1px solid rgb(229, 110, 235)',
-      borderRadius: '12px',
+      borderRadius: '10px',
       background: '#F4F4F4',
       padding: '9px 20px 9px 28px',
       '&:hover': { border: '1px rgb(229, 110, 235)' },

@@ -48,7 +48,7 @@ const Textswiper =()=>{
 }} 
 >
   <SwiperSlide>
-    <Grid container direction="column" alignItems="center">
+    <Grid container direction="column" alignItems="center"sx={{ maxWidth: '100%' }}>
       <Grid item>
         <Icon icon="lucide:instagram" width="30" height="30" style={{ color: '#a484fc' }} />
       </Grid>
@@ -56,10 +56,22 @@ const Textswiper =()=>{
         <Typography variant="h1" sx={{marginTop:3,color:"#9D9FA4",fontSize:'2.3rem'}}>"I Recived this Mangalsutra bracelet as my first karva chauth gift!Its simple and sweet,<br/>just like my husband</Typography>
         <Typography variant="h3" sx={{marginTop:3 ,fontSize:"1.4rem"}}>-Akanksha joshi via instagram</Typography>
       </Grid>
+      <Grid item style={{ marginBottom: '30px' }}> {/* Add margin-bottom to create space */}
+       
+       </Grid>
+    </Grid>
+  </SwiperSlide>
+  <SwiperSlide>
+    <Grid container direction="column" alignItems="center">
       <Grid item>
-        <Button variant="contained" color="primary" sx={{ marginTop: '10px' }}>
-          Read More
-        </Button>
+        <Icon icon="lucide:instagram" width="30" height="30" style={{ color: '#a484fc' }} />
+      </Grid>
+      <Grid item textAlign="center">
+      <Typography variant="h1" sx={{marginTop:3,color:"#9D9FA4",fontSize:'2.3rem'}}>"I Recived this Mangalsutra bracelet as my first karva chauth gift!Its simple and sweet,<br/>just like my husband</Typography>
+        <Typography variant="h3" sx={{marginTop:3 ,fontSize:"1.4rem"}}>-Akanksha joshi via instagram</Typography>
+      </Grid>
+      <Grid item>
+       
       </Grid>
     </Grid>
   </SwiperSlide>
@@ -73,120 +85,85 @@ const Textswiper =()=>{
         <Typography variant="h3" sx={{marginTop:3 ,fontSize:"1.4rem"}}>-Akanksha joshi via instagram</Typography>
       </Grid>
       <Grid item>
-        <Button variant="contained" color="primary" sx={{ marginTop: '3px' }}>
-          Read More
-        </Button>
+       
       </Grid>
     </Grid>
   </SwiperSlide>
-  <SwiperSlide>
-    <Grid container direction="column" alignItems="center">
-      <Grid item>
-        <Icon icon="lucide:instagram" width="30" height="30" style={{ color: '#a484fc' }} />
+</Swiper>
+
+ <Grid container sx={{ marginTop: "39px", padding: "20px" }}>
+      <Grid item xs={12} md={6}>
+        <Typography sx={{ marginLeft: 4, fontSize: "1.7rem" }}>Shop Our Instagram</Typography>
       </Grid>
-      <Grid item textAlign="center">
-      <Typography variant="h1" sx={{marginTop:3,color:"#9D9FA4",fontSize:'2.3rem'}}>"I Recived this Mangalsutra bracelet as my first karva chauth gift!Its simple and sweet,<br/>just like my husband</Typography>
-        <Typography variant="h3" sx={{marginTop:3 ,fontSize:"1.4rem"}}>-Akanksha joshi via instagram</Typography>
+      <Grid item xs={12} md={6}>
+        <Typography sx={{ marginLeft: 4, fontSize: "1.7rem" }}>#MyCaratlane Story</Typography>
       </Grid>
-      <Grid item>
-        <Button variant="contained" color="primary" sx={{ marginTop: '3px' }}>
-          Read More
-        </Button>
+      <Grid container sx={{ marginTop: "20px" }}>
+        <Grid item xs={12} sm={6} md={6}>
+          <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/1.jpg" style={{ width: '100%', height: 'auto' }} alt="Instagram Post" />
+        </Grid>
+        <Grid container item xs={12} sm={6} md={6} spacing={1}>
+          {[...Array(6)].map((_, index) => (
+            <Grid item xs={4} key={index}>
+              <img
+                src={`https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/${index + 2}.jpg`}
+                style={{ width: '100%', height: '100%' }}
+                alt={`Instagram Post ${index + 2}`}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     </Grid>
-  </SwiperSlide>
-</Swiper>;
-<Grid container sx={{marginTop:"39px",padding:"20px"}} >
-    <Grid item md={6} >
-<Typography sx={{marginLeft:4,fontSize:"1.7rem"}}>Shop Our Instagram</Typography>
-</Grid> 
-<Grid item md={6} >
-<Typography sx={{marginLeft:59,fontSize:"1.7rem"}}>#MyCaratlane Story</Typography>
-</Grid> 
-<Grid container sx={{ marginTop: "20px" }}>
-  <Grid item xs={6} sm={6} md={6}>
-    <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/1.jpg" style={{ width: '100%', height: 'auto' }} />
-  </Grid>
-  <Grid container xs={6} sm={6} md={6} >
-    {/* First group of three images */}
-    <Grid item md={4} >
-      <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/2.jpg" style={{ width: '100%', height: '100%' }} />
+    <Grid container sx={{ backgroundColor: "#231535", minHeight: "45vh", justifyContent: "center", alignItems: "center" }}>
+      <Grid container justifyContent="center" alignItems="center" direction="column">
+        <Grid item>
+          <Icon icon="fa:paper-plane-o" width="80" height="80" style={{ color: '#a484fc' }} />
+        </Grid>
+        <Grid item>
+          <Typography variant="body1" sx={{ color: "#ffff", marginTop: 3, fontSize: "2rem", textAlign: "center" }}>
+            Sign up to be a Caratlane insider
+          </Typography>
+          <Typography variant="body1" sx={{ color: "#C4ADE1", border: "2px solid #6b317c", textAlign: "center", marginTop: 3 }}>
+            <Button variant="contained" sx={{ backgroundColor: "#6b317c", width: "100px" }}>Submit</Button>
+          </Typography>
+        </Grid>
+        <Grid item sx={{ marginTop: 3 }}>
+          <FormControl>
+            <RadioGroup
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+            >
+              <FormControlLabel
+                value="female"
+                control={<Radio style={{ color: '#a484fc' }} />} // Change color here
+                label="Female"
+                sx={{ color: '#ffff' }} // Change color here
+              />
+              <FormControlLabel
+                value="male"
+                control={<Radio style={{ color: '#a484fc' }} />} // Change color here
+                label="Male"
+                sx={{ color: '#ffff' }} // Change color here
+              />
+              <FormControlLabel
+                value="other"
+                control={<Radio style={{ color: '#a484fc' }} />} // Change color here
+                label="Other"
+                sx={{ color: '#ffff' }} // Change color here
+              />
+            </RadioGroup>
+          </FormControl>
+        </Grid>
+        <Grid container justifyContent="center" alignItems="center">
+          <Typography variant="p" sx={{ color: "#E481EA" }}> Know More</Typography>
+          <Typography variant="p" sx={{ color: "#ffff", marginLeft: 1 }}> about CaratLane</Typography>
+        </Grid>
+      </Grid>
     </Grid>
-    <Grid item md={4}>
-      <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/3.jpg" style={{ width: '100%', height: '100%' }} />
-    </Grid>
-    <Grid item md={4}>
-      <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/4.jpg" style={{ width: '100%', height: '100%' }} />
-    </Grid>
-
-    {/* Second group of three images */}
-    <Grid item md={4} >
-      <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/2.jpg" style={{ width: '100%', height: '100%' }} />
-    </Grid>
-    <Grid item md={4}>
-      <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/3.jpg" style={{ width: '100%', height: '100%' }} />
-    </Grid>
-    <Grid item md={4}>
-      <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/Others/Insta/12/4.jpg" style={{ width: '100%', height: '100%' }} />
-    </Grid>
-  </Grid>
-</Grid>
-
-
-
-</Grid>
-<Grid container sx={{ backgroundColor: "#231535", height: "45vh", justifyContent: "center", alignItems: "center"}}>
-<Grid container  justifyContent="center" alignItems="center"  direction="column">
-  <Grid item>
-  <Icon icon="fa:paper-plane-o" 
-     width="80" height="80" 
-    style={{ color: '#a484fc' }} />
-  </Grid>
-  <Grid item>
-  <Typography variant="body1" sx={{  color:"#ffff" ,marginTop: 3,fontSize:"2rem"}}>
-  Sign up to be a Caratlane insider<br />
-  <Typography variant="body1" sx={{ marginLeft: 2,color:"#C4ADE1",border:"2px solid #6b317c",textAlign:"end",marginTop: 3 }}>
-  <Button variant="contained" sx={{backgroundColor:"#6b317c",width:"100px"}} >Submit</Button>
- </Typography>
-
-  </Typography>
-  </Grid>
-  <Grid item sx={{marginTop:3}}>
-  <FormControl>
-  <RadioGroup
-    row
-    aria-labelledby="demo-row-radio-buttons-group-label"
-    name="row-radio-buttons-group"
-  >
-    <FormControlLabel 
-      value="female" 
-      control={<Radio style={{ color: '#a484fc' }} />} // Change color here
-      label="Female" 
-      style={{ color: '#ffff' }} // Change color here
-    />
-    <FormControlLabel 
-      value="male" 
-      control={<Radio style={{ color: '#a484fc' }} />} // Change color here
-      label="Male" 
-      style={{ color: '#ffff' }} // Change color here
-    />
-    <FormControlLabel 
-      value="other" 
-      control={<Radio style={{ color: '#a484fc' }} />} // Change color here
-      label="Other" 
-      style={{ color: '#ffff' }} // Change color here
-    />
-  </RadioGroup>
-</FormControl>
-  </Grid>
-  <Grid container justifyContent="center"alignItems="center">
-    <Typography variant="p"sx={{color:"#E481EA"}}> Know More</Typography>
-    <Typography variant="p" sx={{color:"#ffff",marginLeft:1}}> about CaratLane</Typography>
-  </Grid>
-</Grid>
-</Grid>
 <Grid container spacing={2} sx={{marginTop:2,padding:"28px"}}>
-  <Grid item xs={6} sm={6} md={4}>
+  <Grid item xs={12} sm={6} md={4}>
     <Typography sx={{marginBottom:2}}>Online Jewellery Store</Typography>
     <Typography variant="p">CaratLane.com began in 2008 with the simple motto of democratising jewellery. 
       And today, after 13 glorious years, it has come to be recognised as one of the top 20 e-commerce portals in India. 
@@ -199,7 +176,7 @@ const Textswiper =()=>{
         </Typography>
         </Typography>
   </Grid>
-  <Grid item xs={6} sm={6} md={4}>
+  <Grid item xs={12} sm={6} md={4}>
     <Typography sx={{marginBottom:2}}>Shopping at CaratLane</Typography>
     <Typography variant="p">Placing security first, CaratLane ensures that every transaction made on the site is safe and smooth for the customers. To attain this, 
     the company follows stern policies of transparency through the whole customer buying journey.<br/>
@@ -210,7 +187,7 @@ const Textswiper =()=>{
         
         </Typography>
   </Grid>
-  <Grid item xs={6} sm={6} md={4}>
+  <Grid item xs={12} sm={6} md={4}>
     <Typography sx={{marginBottom:2}}>CaratLane’s Vision</Typography>
     <Typography variant="p">CaratLane works with the vision of offering tastefully designed jewellery at revolutionary prices. This is achieved by eliminating all inefficiencies which result in drastically reduced costs.
      With CaratLane, users stand to save as much as 30% when compared to prices in the market.<br/>

@@ -1,14 +1,24 @@
-import React from "react";
-import { Button, Menu, MenuItem, Popper, Paper } from "@mui/material";
-import { AccountCircle } from "@mui/icons-material";
-
-const DropdownMenu = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
+import SaveIcon from '@mui/icons-material/Save';
+import PrintIcon from '@mui/icons-material/Print';
+import ShareIcon from '@mui/icons-material/Share';
+import EditIcon from '@mui/icons-material/Edit';
+const Dropup=()=>{
+  const actions = [
+    { icon: <FileCopyIcon sx={{ color: '#FF0000' }} />, name: 'Copy' },
+    { icon: <SaveIcon sx={{ color: '#00FF00' }} />, name: 'Save' },
+    { icon: <PrintIcon sx={{ color: '#0000FF' }} />, name: 'Print' },
+    { icon: <ShareIcon sx={{ color: '#FFFF00' }} />, name: 'Share' },
+  ];
   const [open, setOpen] = React.useState(false);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-    setOpen(!open);
+  const handleOpen = () => {
+    setOpen(true);
   };
 
   const handleClose = () => {
@@ -16,29 +26,27 @@ const DropdownMenu = () => {
   };
 
   return (
-    <div style={{ position: "sticky", top: 10, right: 10,zIndex:-1 }}>
-      <Button onClick={handleClick} startIcon={<AccountCircle />}>
-        Open Dropdown
-      </Button>
-      <Popper open={open} anchorEl={anchorEl} placement="bottom-end" transition>
-        {({ TransitionProps }) => (
-          <Paper>
-            <Menu
-              id="menu-list"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              {...TransitionProps}
-            >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
-            </Menu>
-          </Paper>
-        )}
-      </Popper>
-    </div>
+    <>
+     <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
+      <SpeedDial
+        ariaLabel="SpeedDial openIcon example"
+        sx={{ position: 'absolute', bottom: 16, right: 16 }}
+        icon={<SpeedDialIcon icon={<EditIcon />} openIcon={<SpeedDialIcon />} />}
+        onClose={handleClose}
+        onOpen={handleOpen}
+        open={open}
+      >
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            onClick={handleClose}
+          />
+        ))}
+      </SpeedDial>
+    </Box>
+    </>
   );
-};
-
-export default DropdownMenu;
+}
+export default Dropup

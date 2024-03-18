@@ -113,8 +113,8 @@ const Cards = () => {
           }}
         >
           <SwiperSlide> <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/01-JAN/HPbanner/Collection/Collection_block_minions.jpg" style={{ maxWidth: "100%", height: "auto" }} /></SwiperSlide>
-          <SwiperSlide> <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/01-JAN/HPbanner/Collection/Collection_block_minions.jpg" style={{ maxWidth: "100%", height: "auto" }} /></SwiperSlide>
-          <SwiperSlide> <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/01-JAN/HPbanner/Collection/Collection_block_minions.jpg" style={{ maxWidth: "100%", height: "auto" }} /></SwiperSlide>
+          <SwiperSlide> <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/11_NOV/HPBanner/Collection/alpona/Collection_Alpona.webp" style={{ maxWidth: "100%", height: "auto" }} /></SwiperSlide>
+          <SwiperSlide> <img src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/05-MAY/HPBanner/Collection/02/Collection_Harry_potter3.jpg" style={{ maxWidth: "100%", height: "auto" }} /></SwiperSlide>
         </Swiper>
       </Grid>
       <Grid container spacing={2} sx={{ marginTop: "55px", paddingX: "28px" }}>
@@ -139,7 +139,7 @@ const Cards = () => {
         <Typography sx={{ position: "absolute", top: "240px", marginLeft: "450px" }}>
           <Button sx={{ backgroundColor: "#dc58e3", color: "#ffff", fontSize: "1.1rem", textTransform: 'none' }}>Schedule Appointment </Button></Typography>
         <Typography sx={{ position: "absolute", top: "150px", marginLeft: "1190px", fontSize: '1.5rem', fontWeight: 100 }}>Come Visit Us At Any Of Our Store</Typography>
-        <Typography variant="p" sx={{ position:"absolute", marginLeft: "1200px", borderRadius: "5px",  borderColor: "#4f3267", 
+        <Typography variant="p" sx={{ position:"absolute", marginLeft: "1100px", borderRadius: "5px",  borderColor: "#4f3267", 
     borderWidth: "3px",  borderStyle: "solid", paddingY:"5PX", top: "240px",backgroundColor:"#ffff",colour:"#4f3267"}}>Enter Pin Code or City</Typography>
 
         <Grid item xs={6} sm={6} md={6} >

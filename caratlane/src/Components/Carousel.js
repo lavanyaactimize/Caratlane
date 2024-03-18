@@ -14,7 +14,7 @@ const CustomCarousel = () => {
 
     return (
         <Box position="relative" 
-        top={100} width="100%" zIndex={-1}
+        top={100} width="100%" zIndex={-1} sx={{marginTop:{xs:"40px"}}}
         >
             <style>
                 {`

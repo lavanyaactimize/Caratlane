@@ -3,6 +3,7 @@ import { Grid, Typography,Link,Button, Divider } from "@mui/material";
 import { styled } from "@mui/material";
 import { Box, } from "@mui/system";
 import { Icon } from "@iconify/react";
+import Footermobile from "./Footermobile";
 // import Select, { selectClasses } from '@mui/joy/Select';
 // import Option from '@mui/joy/Option';
 // import { createSvgIcon } from '@mui/material/utils';
@@ -41,25 +42,14 @@ const IconBox = styled(Box)(({ theme }) => ({
       justifyContent: "center",
     },
   }));
-//   const PlusIcon = createSvgIcon(
-//     // credit: plus icon from https://heroicons.com/
-//     <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       fill="none"
-//       viewBox="0 0 24 24"
-//       strokeWidth={1.5}
-//       stroke="currentColor"
-//     >
-//       <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-//     </svg>,
-//     'Plus',
-//   );
+
   return (
     <>
+    <Grid sx={{display:{xs:"none",md:"block"}}}>
       <Grid
         container
         spacing={2}
-        sx={{ backgroundColor: "#f4ecf4", height: "65vh", marginTop: 4, justifyContent: "center" }}
+        sx={{ backgroundColor: "#f4ecf4",minHeight: "65vh", marginTop: 4, justifyContent: "center" }}
       >
         <Grid item md={2} sx={{ marginTop: 2 }}>
           <Typography sx={{ fontSize: "0.9rem" }}>Know Your Jewellery</Typography>
@@ -194,34 +184,12 @@ const IconBox = styled(Box)(({ theme }) => ({
       </Grid>
       
       </Grid>
-      {/* <Grid
-        container
-        spacing={2}
-        sx={{ backgroundColor: "#f4ecf4", height: "65vh", marginTop: 4, justifyContent: "center" }}>
-            <Grid xs={12}>
-            <Select
-      placeholder="Select a pet…"
-      indicator={<PlusIcon/>}
-      sx={{
-        width: 240,
-        [`& .${selectClasses.indicator}`]: {
-          transition: '0.2s',
-          [`&.${selectClasses.expanded}`]: {
-            transform: 'rotate(-180deg)',
-          },
-        },
-      }}
-    >
-      <Option value="dog">Dog</Option>
-      <Option value="cat">Cat</Option>
-      <Option value="fish">Fish</Option>
-      <Option value="bird">Bird</Option>
-    </Select>
-            </Grid>
-        </Grid> */}
+      </Grid>
+     <Footermobile/>
 
-      <Grid container direction="column" sx={{paddingX:18,marginTop:4}}>
+      <Grid container direction="column" sx={{paddingX:18,marginTop:4 ,display:{xs:"none",md:"block"}}}>
         <Typography sx={{fontSize:"1rem"}}>Popular Searches</Typography>
+        
         <Typography sx={{color:"#8863FB",fontSize:"0.9rem",marginTop:2}}>Gold Rate in Major Cities </Typography>
         <Typography variant="p"sx={{marginTop:1,color:"#4F3267"}}>Gold Rate Today In Chennai|
 Gold Rate Today In Hyderabad |
@@ -234,6 +202,7 @@ Gold Rate Today In Vijayawada |
 Gold Rate Today In Kolkata |
 Gold Rate Today In Ahmedabad</Typography>
 <Divider sx={{my:2}}/>
+
 <Typography sx={{color:"#8863FB",fontSize:"0.9rem",marginTop:2}}>For Women </Typography>
 <Typography variant="p"sx={{marginTop:1,color:"#4F3267"}}>
 Rings For Women|
