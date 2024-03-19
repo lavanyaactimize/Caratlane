@@ -138,6 +138,7 @@ display: { xs: 'block', md: 'none', color: 'black' } }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%', }}>
         <Tabs value={value} onChange={handleChange} indicatorColor="#8863fb" aria-label="basic tabs example">
           {jewelleryData.map((item) => (
+            
             <Tab sx={{
               fontSize: '0.9rem', fontWeight: '500', textTransform: 'none', color: '#4f3267', 
               marginLeft: {
@@ -154,11 +155,12 @@ display: { xs: 'block', md: 'none', color: 'black' } }}>
 
               },
             }} label={item.label} {...a11yProps(item.index)} onMouseEnter={() => handleChange(item.index)} />
+            
 
           ))}
           
 
-          <Grid item sx={{marginTop:'5px', right: 260, zIndex: 1000,width:'90%',display: {  md: 'none',lg:"block" } }}>
+          <Grid item sx={{marginTop:'5px', right: 260, zIndex: 1000,width:'90%',display: {  md: 'none',lg:"block",sm:"block" } }}>
 
           <Input
               placeholder="Search by"
@@ -301,42 +303,66 @@ display: { xs: 'block', md: 'none', color: 'black' } }}>
 
     <Grid>
 
-
+  
       <Grid container sx={{ alignItems: 'center', }}>
-
-        <Grid item sx={{ paddingTop: '4px', marginLeft: 2, display: { xs: 'block', md: 'none' }, }}>
-          <img src="asserts\images\cartlane (2).png" width={30} height={38} alt="Cart Icon" />
+      <Grid item sx={{ paddingTop: '4px', marginLeft:{sm:-4, xs:-4}, display: { xs: 'block', md: 'none' }, }}>
+          <img src="asserts\images\cartlane (2).png" width={30} height={30} alt="Cart Icon" />
         </Grid>
-        <Grid item sx={{ top: "50px", right: 160, zIndex: 1000, marginLeft: 2, display: { xs: 'block', md: 'none' }, }}>
+
+      <Box
+  sx={{
+    flexGrow: 1,
+    display: { xs: 'none', sm: 'block', md: "none" },
+    justifyContent: 'center', // Center horizontally
+    alignItems: 'center', // Center vertically
+  }}
+>
+  <Input
+    placeholder="Search by"
+    sx={{
+      width: '150%',
+      border: '1px solid rgb(229, 110, 235)',
+      borderRadius: '10px',
+      background: '#F4F4F4',
+      marginLeft:"20px",
+      marginTop:"10px",
+      padding: '9px 20px 9px 28px',
+      '&:hover': { border: '1px rgb(229, 110, 235)' },
+      '&:focus': { outline: 'none', boxShadow: '0 2px 2px 0 #e9e9e9' },
+      '&.MuiInput-underline:before, &.MuiInput-underline:hover:not(.Mui-disabled):before': {
+        borderBottom: 'none',
+      },
+    }}
+  />
+</Box>
+
+        
+        <Grid item sx={{ top: "50px", right: 160, zIndex: 1000, marginLeft: {sm:25,xs:5}, display: { xs: 'block', md: 'none' }, }}>
           <Typography variant="p" sx={{ color: '#4f3267' }}>Delivery & store
             <Typography sx={{ fontSize: "12px", color: "#DE57E5" }}>Enter Pincode</Typography></Typography>
         </Grid>
-        <Grid item sx={{ paddingTop: '8px', marginLeft: 2, display: { xs: 'block', md: 'none' }, }}>
+        <Grid item sx={{ paddingTop: '8px', marginLeft: 1, display: { xs: 'block', md: 'none' }, }}>
           <img src="asserts\images\india.png" width={35} height={35} />
         </Grid>
         <Grid item sx={{ top: "59px", right: 80, zIndex: 1000, marginLeft: 2, display: { xs: 'block', md: 'none' }, }}>
           <Icon icon="mdi:user" width="25" height="25" style={{ color: '#4f3267' }} />
         </Grid>
-        <Grid item sx={{ top: "59px", right: 80, zIndex: 1000, marginLeft: 1.8, display: { xs: 'block', md: 'none' }, }}>
+        <Grid item sx={{ top: "59px", right: 80, zIndex: 1000, marginLeft: 1.1, display: { xs: 'block', md: 'none' }, }}>
           <Icon icon="mdi:heart" width="25" height="25" style={{ color: '#4f3267' }} />
         </Grid>
 
       </Grid>
 
     </Grid>
-
-  </>
-
-)}
-
-<Grid>
+    <Grid>
 
 <Box
   sx={{
     flexGrow: 1,
-    display: { xs: 'flex', sm: 'flex', md: "none" },
+    display: { xs: 'flex', sm: 'none', md: "none" },
     justifyContent: 'center', // Center horizontally
     alignItems: 'center', // Center vertically
+    marginLeft:{xs:"38px", }
   }}
 >
   <Input
@@ -359,6 +385,12 @@ display: { xs: 'block', md: 'none', color: 'black' } }}>
 
 </Grid>
 
+  </>
+
+)}
+
+
+
 
 
 </Grid >
@@ -368,3 +400,5 @@ display: { xs: 'block', md: 'none', color: 'black' } }}>
 }
 
 export default Navbar;
+
+
