@@ -400,5 +400,3 @@ display: { xs: 'block', md: 'none', color: 'black' } }}>
 }
 
 export default Navbar;
-
-
