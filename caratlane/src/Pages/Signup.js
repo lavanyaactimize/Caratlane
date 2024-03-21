@@ -440,6 +440,7 @@ setValue(data.user.email)
       navigate("/");
     })
 };
+
 useEffect(() => {
   setValue(localStorage.getItem("email"))
 }, []);
@@ -481,7 +482,7 @@ return (
      </Grid>
     </Grid>
   </Grid>
-    <Grid container spacing={2} justifyContent="center" alignItems="center" marginTop="20px">
+    <Grid container spacing={2} justifyContent="center" alignItems="center">
       <Grid item xs={12} sm={6}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
@@ -663,7 +664,7 @@ return (
     </Button>
   </Grid>
   <Grid item sx={{marginTop: 1}}>
-    <Typography variant="body1">
+    <Typography variant="p">
       Already have an account?
       <Link sx={{ color: '#ff69b4', textDecoration: 'none' }}>Log In</Link>
     </Typography>

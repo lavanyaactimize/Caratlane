@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { Grid, Input } from "@mui/material";
+import { Button, Grid, Input } from "@mui/material";
 import { Icon } from '@iconify/react';
 import Rings from "./Rings";
 import Earings from "./Earings";
@@ -15,6 +15,12 @@ import Gifts from "./Gifts";
 import CustomCarousel from "./Carousel";
 import Appbar from "./Appbar";
 import Modal from '@mui/material/Modal';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import IconButton from '@mui/material/IconButton';
+import { Link, useNavigate } from 'react-router-dom';
+
+
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -65,9 +71,18 @@ const style = {
   boxShadow: 24,
 
 };
-const Navbar = () => {
-  const [value, setValue] = React.useState(0);
 
+const Navbar = () => {
+  const navigate = useNavigate();
+  const [value, setValue] = React.useState(0);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
   const handleChange = (newValue) => {
     setValue(newValue);
   };
@@ -87,11 +102,10 @@ const Navbar = () => {
   const [openModalForm, setOpenModalForm] = useState(false);
 
   
-  let token = localStorage.getItem('accessToken');
-
+  let token = localStorage.getItem('idToken');
   const Name = localStorage.getItem('displayName');
 
-  console.log('this is the name in nav bar', Name);
+  console.log('this is the name', Name);
 
   console.log("this is the token in nav bar ", token)
 
@@ -188,7 +202,49 @@ display: { xs: 'block', md: 'none', color: 'black' } }}>
             <img src="asserts\images\india.png" width={35} height={35} />
           </Grid>
           <Grid item sx={{ top: "59px", right: 80, zIndex: 1000,marginLeft:2 }}>
+         
+          <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
             <Icon icon="mdi:user" width="25" height="25" style={{ color: '#4f3267' }} />
+            </IconButton>
+          
+            <Menu
+              sx={{ mt: '40px',marginLeft:"10px" }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+           
+                <MenuItem   onClick={handleCloseUserMenu}>
+                <div>
+                  <Typography textAlign="center" variant="h1">Your Account<br/>
+                  <Typography textAlign="center" variant="h3"sx={{marginTop:3}}>Access account & manage your orders.</Typography>
+                  </Typography>
+                  <Grid container justifyContent="center" spacing={2} sx={{ marginTop: 2 }}>
+    <Grid item>
+      <Link to ="/signup">
+      <Button  sx={{backgroundColor:"#cf60e9",color:"#ffff"}}>Sign UP</Button>
+      </Link>
+    </Grid>
+    <Grid item>
+    <Link to ="/login">
+      <Button sx={{ borderRadius: "4px", border: "2px solid #c6b1fc", color: "black" }}>Loggin</Button>
+      </Link>
+    </Grid>
+  </Grid>
+  </div>
+                </MenuItem>
+            
+            </Menu>
           </Grid>
           <Grid item sx={{ top: "59px", right: 50, zIndex: 1000,marginLeft:1.8 }}>
             <Icon icon="mdi:heart" width="25" height="25" style={{ color: '#4f3267' }} />

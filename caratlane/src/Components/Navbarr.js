@@ -16,7 +16,7 @@ import Fade from '@mui/material/Fade';
 
 import Menu from '@mui/material/Menu';
 
- 
+
 
 import InputAdornment from '@mui/material/InputAdornment';
 
@@ -30,11 +30,11 @@ import Modal from '@mui/material/Modal';
 
 // import {googleAccount} from '../pages/SignUp'
 
- 
 
- 
 
- 
+
+
+
 
 const style = {
 
@@ -54,11 +54,11 @@ const style = {
 
 };
 
- 
 
- 
 
- 
+
+
+
 
 const Navbarr = () => {
 
@@ -74,7 +74,7 @@ const Navbarr = () => {
 
     // const navigate = useNavigate();
 
- 
+
 
     let token = localStorage.getItem('accessToken');
 
@@ -84,7 +84,7 @@ const Navbarr = () => {
 
     console.log("this is the token in nav bar ", token)
 
- 
+
 
     const open = Boolean(anchorEl);
 
@@ -102,7 +102,7 @@ const Navbarr = () => {
 
     };
 
- 
+
 
     const handleExpansion = () => {
 
@@ -110,7 +110,7 @@ const Navbarr = () => {
 
     };
 
- 
+
 
     const handleTabChange = (event, newValue) => {
 
@@ -118,9 +118,9 @@ const Navbarr = () => {
 
     }
 
- 
 
- 
+
+
 
     const handleOpen = () => {
 
@@ -128,7 +128,7 @@ const Navbarr = () => {
 
     }
 
- 
+
 
     const handleClose = () => {
 
@@ -136,15 +136,15 @@ const Navbarr = () => {
 
     }
 
- 
+
 
     // drop down for sign out funcationality
 
- 
 
- 
 
- 
+
+
+
 
     // const handleLogOut = () => {
 
@@ -166,11 +166,11 @@ const Navbarr = () => {
 
     // }
 
- 
 
- 
 
-    const handleOpenForm = () =>{
+
+
+    const handleOpenForm = () => {
 
         setOpenModalForm(true);
 
@@ -180,18 +180,18 @@ const Navbarr = () => {
 
     const handleCloseForm = () => setOpenModalForm(false);
 
- 
+
 
     return (
 
         <>
 
- 
+
 
             <AppBar sx={{ backgroundColor: 'white', marginTop: '30px', }}>
 
                 <Grid container sx={{ justifyContent: 'center', }} >
-            
+
                     <Grid container sx={{ width: { lg: '70%', xl: '65%' }, alignItems: 'center', display: 'flex' }} >
 
                         <Grid sx={{ marginRight: { xs: '5px', sm: '10px' }, marginLeft: { xs: '5px', sm: '10px' }, display: { xs: 'block', md: 'none', color: 'black' } }}>
@@ -200,9 +200,9 @@ const Navbarr = () => {
 
                         </Grid>
 
-                        <Grid sx={{ cursor: 'pointer',}}
+                        <Grid sx={{ cursor: 'pointer', }}
                         //  onClick= {() => navigate('/')} 
-                         >
+                        >
 
                             <img src="https://cdn.iconscout.com/icon/free/png-256/free-nykaa-3384872-2822953.png?f=webp" alt="logo" width={60} height={60} />
 
@@ -276,7 +276,7 @@ const Navbarr = () => {
 
                             />
 
- 
+
 
                         </Box>
 
@@ -288,15 +288,16 @@ const Navbarr = () => {
 
                                     <Grid sx={{ display: { xs: 'none', md: 'block' } }}>
 
- 
 
- 
+
+
 
                                         <Grid sx={{ display: 'flex', alignItems: 'center', }}>
 
-                                            <Icon onClick={handleOpenForm} icon="ant-design:user-outlined" width="20" height="20" style={{ color: 'black', marginRight: '5px' }} />
+                                            <Icon onClick={handleOpenForm} icon="ant-design:user-outlined" width="20" height="20"
+                                                style={{ color: 'black', marginRight: '5px' }} />
 
- 
+
 
                                             <Modal
 
@@ -312,7 +313,7 @@ const Navbarr = () => {
 
                                                 <Box sx={style}>
 
- 
+
 
                                                     <Grid sx={{ textAlign: 'center', margin: '5px', }}>
 
@@ -321,7 +322,7 @@ const Navbarr = () => {
                                                             Are you sure you want to Log out.?
 
                                                         </Typography>
-{/* 
+                                                        {/* 
                                                         <Typography sx={{ borderTop: '1px solid lightgray', padding: '10px', fontSize: '11px', fontWeight: 'bold', color: '#E80071', cursor: 'pointer' }} onClick={handleLogOut}>Logout</Typography> */}
 
                                                         <Typography sx={{ borderTop: '1px solid lightgray', padding: '10px', fontSize: '11px', fontWeight: 'bold', color: '#E80071', cursor: 'pointer' }}>Logout from all devices</Typography>
@@ -330,17 +331,17 @@ const Navbarr = () => {
 
                                                     </Grid>
 
- 
+
 
                                                 </Box>
 
                                             </Modal>
 
- 
+
 
                                             <Typography sx={{ color: 'black', fontSize: '12px', marginRight: '15px' }}>{Name}</Typography>
 
- 
+
 
                                         </Grid>
 
@@ -364,7 +365,7 @@ const Navbarr = () => {
 
                                         onClick={handleClick}
 
- 
+
 
                                     >Sign in</Button>
 
@@ -414,7 +415,7 @@ const Navbarr = () => {
 
                             )}
 
- 
+
 
                         </Grid>
 
@@ -430,15 +431,15 @@ const Navbarr = () => {
 
                                 <Grid sx={{ display: { xs: 'block', md: 'none' } }}>
 
- 
 
- 
+
+
 
                                     <Grid sx={{ display: 'flex', alignItems: 'center', }}>
 
                                         <Icon onClick={handleOpenForm} icon="ant-design:user-outlined" width="20" height="20" style={{ color: 'black', marginRight: '5px' }} />
 
- 
+
 
                                         <Modal
 
@@ -454,7 +455,7 @@ const Navbarr = () => {
 
                                             <Box sx={style}>
 
- 
+
 
                                                 <Grid sx={{ textAlign: 'center', margin: '5px', }}>
 
@@ -472,17 +473,17 @@ const Navbarr = () => {
 
                                                 </Grid>
 
- 
+
 
                                             </Box>
 
                                         </Modal>
 
- 
+
 
                                         <Typography sx={{ color: 'black', fontSize: '12px', marginRight: '10px' }}>{Name}</Typography>
 
- 
+
 
                                     </Grid>
 
@@ -562,7 +563,7 @@ const Navbarr = () => {
 
                             )}
 
- 
+
 
                     </Grid>
 
@@ -610,7 +611,7 @@ const Navbarr = () => {
 
                             />
 
- 
+
 
                         </Box>
 
@@ -620,7 +621,7 @@ const Navbarr = () => {
 
             </AppBar>
 
- 
+
 
             <Drawer anchor="left" open={isDrawerOpen} onClose={handleClose}>
 
@@ -710,7 +711,7 @@ const Navbarr = () => {
 
                 )}
 
- 
+
 
             </Drawer>
 
@@ -720,8 +721,7 @@ const Navbarr = () => {
 
 }
 
- 
+
 
 export default Navbarr;
 
- 
