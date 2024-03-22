@@ -33,7 +33,7 @@ const Flashpage=()=>
 <Swiperr/>
 <Textswiper/>
 <Footer/> 
-{/* <Dropup/> */}
+<Dropup/>
  
 
 
