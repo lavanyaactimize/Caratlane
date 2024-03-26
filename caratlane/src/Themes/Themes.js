@@ -20,6 +20,13 @@ theme.typography.h1= {
     fontFamily:'"Arial", sans-serif',
     fontSize:'25px',
 }
+theme.typography.h2= {
+    fontFamily:'"Arial", sans-serif',
+    fontSize:'1.1rem',
+    fontWeight:'bold',
+    color:"#4f3267"
+}
+
 theme.typography.h3= {
     fontFamily:'"Arial", sans-serif',
     fontSize:'0.9rem',
