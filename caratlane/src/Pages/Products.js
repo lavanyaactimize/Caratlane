@@ -4,14 +4,11 @@ import Appbarr from "../Components/Appbarr";
 import { Button, Grid, Typography,Divider} from "@mui/material";
 import Checkbox from '@mui/material/Checkbox';
 import { styled, alpha } from '@mui/material/styles';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import EditIcon from '@mui/icons-material/Edit';
-import ArchiveIcon from '@mui/icons-material/Archive';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import CloseIcon from '@mui/icons-material/Close';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
+import Cardswiper from "../Components/Cardsswiper";
 
 const StyledButton = styled(Button)(({ theme }) => ({
   color:"#8863fb",
@@ -30,7 +27,7 @@ const Products =()=>
     setOpenData(!openData);
   };
  
-
+  
     const Buttons=[
         {button:'All'},
         {button:'Try at Home'},
@@ -166,7 +163,7 @@ const Products =()=>
               color: '#4f3267',
               cursor: 'pointer',
               transition: 'background-color 0.3s ease',
-              fontSize:"1.5rem"
+              fontSize:"1.3rem"
             }}
             onMouseOver={(e) => {
               e.target.style.backgroundColor = '#8863FB';
@@ -466,7 +463,26 @@ const Products =()=>
             <Checkbox {...label} /> Fast Delivery
           </Grid>
         </Grid>
-        <Grid item md={9} sx={{ border: "4px solid green" }}></Grid>
+        <Grid item md={9} >
+          <Grid  container  justifyContent="space-between" alignItems="center">
+          <Button variant="outlined" endIcon={<CloseIcon />}
+           sx={{
+            marginLeft:"14px",
+            marginTop:2,
+            borderRadius: '20px', 
+            borderColor: 'black', 
+            marginLeft: '10px', 
+            color: 'black',
+            textTransform: 'none',
+            fontSize:"1rem" 
+          }}>
+        Engagement
+      </Button>
+   
+
+          </Grid>
+          <Cardswiper/>
+        </Grid>
       </Grid>
         </>
     )
